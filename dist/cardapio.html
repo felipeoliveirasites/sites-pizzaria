@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/dist/css/cardapio.css">
+    
+</head>
+<body>
+    <header>
+      <div class="fundo-banner">
+                  <div class="banner">
+                    <h1 class="principal destaque" onclick="location.href='index.html'" style="cursor: pointer;">Pizzaria Armagedom</h1>
+                    <img src="img/logo.png" class="logo" alt="logo" onclick="location.href='index.html'" style="cursor: pointer;">
+                  </div>
+                  <img src="img/pizza.png" class="pizza" alt="Menu Pizza" id="openMenu">
+                  
+      <div class="menu-lateral" id="menuLateral">
+        <button id="fecharMenu">&times;</button>
+        <nav>
+          <ul>
+            <li><a href="cardapio.html">🍕 Cardápio</a></li>
+            <li><a href="promocoes.html">🔥 Promoções</a></li>
+            <li><a href="contato.html">📞 Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+      <div class="overlay" id="overlay"></div>
+      </header>
+
+    <section class="secao-cardapio">
+        <h1 class="destaque">Nosso Cardápio</h1>
+        <div class="grid-cardapio">
+          
+          <div class="item-cardapio">
+            <h2>Calabresa Especial</h2>
+            <p>Molho de tomate, calabresa defumada, cebola roxa e orégano.</p>
+            <span class="preco">R$ 39,90</span>
+          </div>
+      
+          <div class="item-cardapio">
+            <h2>Margherita</h2>
+            <p>Molho de tomate, mussarela, tomate fresco e manjericão.</p>
+            <span class="preco">R$ 42,90</span>
+          </div>
+      
+          <div class="item-cardapio">
+            <h2>Quatro Queijos</h2>
+            <p>Mussarela, gorgonzola, catupiry e parmesão.</p>
+            <span class="preco">R$ 44,90</span>
+          </div>
+      
+          <!-- Adicione mais itens aqui -->
+          <div class="item-cardapio">
+            <h2>Calabresa</h2>
+            <p>Calabresa fatiada, cebola, mussarela e orégano.</p>
+            <span class="preco">R$ 42,90</span>
+          </div>
+      
+          <div class="item-cardapio">
+            <h2>Quatro Queijos</h2>
+            <p>Mussarela, gorgonzola, catupiry e parmesão.</p>
+            <span class="preco">R$ 44,90</span>
+          </div>
+      
+          <div class="item-cardapio">
+            <h2>Portuguesa</h2>
+            <p>Presunto, ovos, cebola, ervilha e pimentão.</p>
+            <span class="preco">R$ 45,90</span>
+          </div>
+      
+          <div class="item-cardapio">
+            <h2>Frango com Catupiry</h2>
+            <p>Frango desfiado, catupiry e orégano.</p>
+            <span class="preco">R$ 43,90</span>
+          </div>
+      
+          <div class="item-cardapio">
+            <h2>Pepperoni</h2>
+            <p>Mussarela, pepperoni crocante e orégano.</p>
+            <span class="preco">R$ 46,90</span>
+          </div>
+      
+          <div class="item-cardapio">
+            <h2>Vegetariana</h2>
+            <p>Legumes frescos, mussarela e ervas finas.</p>
+            <span class="preco">R$ 41,90</span>
+          </div>
+      
+          <div class="item-cardapio">
+            <h2>Moda da Casa</h2>
+            <p>Ingredientes especiais selecionados pelo pizzaiolo.</p>
+            <span class="preco">R$ 47,90</span>
+          </div>
+      
+          <div class="item-cardapio">
+            <h2>Banana com Canela</h2>
+            <p>Banana, açúcar, canela e leite condensado.</p>
+            <span class="preco">R$ 40,90</span>
+          </div>
+      
+          <div class="item-cardapio">
+            <h2>Chocolate com Morango</h2>
+            <p>Chocolate ao leite, morango fresco e leite condensado.</p>
+            <span class="preco">R$ 48,90</span>
+          </div>
+      
+        </div>
+      </section>
+      
+      <script src="scripts/cardapio.js"></script>
+      <script src="script.js"></script>
+</body>
+</html>

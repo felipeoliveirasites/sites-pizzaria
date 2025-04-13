@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contato | Pizzaria</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <style>
+    .contato-container {
+      background-color: white;
+      border-radius: 20px;
+      padding: 2rem;
+      max-width: 800px;
+      margin: 2rem auto;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contato-form input,
+    .contato-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .contato-form button {
+      width: 100%;
+    }
+
+    .contato-info {
+      margin-top: 2rem;
+      font-size: 1.1rem;
+      color: var(--Textos-principais);
+    }
+
+    .contato-info h3 {
+      margin-bottom: 1rem;
+      color: var(--Títulos-e-ícones);
+    }
+
+    .contato-container.ativo {
+      animation: aparecer 1s ease;
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="contato-container">
+    <h1 class="destaque">Entre em Contato</h1>
+    <form class="contato-form">
+      <input type="text" name="nome" placeholder="Seu nome" required />
+      <input type="email" name="email" placeholder="Seu e-mail" required />
+      <textarea name="mensagem" rows="5" placeholder="Digite sua mensagem..." required></textarea>
+      <button type="submit" class="btn-principal">Enviar Mensagem</button>
+    </form>
+
+    <div class="contato-info">
+      <h3>Informações de Contato</h3>
+      <p><strong>Telefone:</strong> (11) 98765-4321</p>
+      <p><strong>WhatsApp:</strong> (11) 91234-5678</p>
+      <p><strong>Email:</strong> contato@pizzariaexemplo.com</p>
+      <p><strong>Endereço:</strong> Rua das Pizzas, 123 - Centro - São Paulo/SP</p>
+    </div>
+  </section>
+
+  <script>
+    function verificarVisibilidadeContato() {
+      const box = document.querySelector('.contato-container');
+      const pos = box.getBoundingClientRect();
+
+      if (pos.top < window.innerHeight && pos.bottom > 0) {
+        box.classList.add('ativo');
+      }
+    }
+
+    window.addEventListener('scroll', verificarVisibilidadeContato);
+    window.addEventListener('DOMContentLoaded', verificarVisibilidadeContato);
+  </script>
+</body>
+</html>

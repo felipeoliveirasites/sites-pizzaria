@@ -1,0 +1,62 @@
+.secao-cardapio {
+    background-color: var(--Fundo-principal);
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .grid-cardapio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .item-cardapio {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+    border-left: 8px solid var(--Botões-principais);
+    transition: transform 0.3s ease;
+  }
+  
+  .item-cardapio:hover {
+    transform: scale(1.03);
+    border-left-color: var(--Destaques-secundarios);
+  }
+  
+  .item-cardapio h2 {
+    color: var(--Títulos-e-ícones);
+    font-family: var(--Fonte-titulo);
+    margin-bottom: 0.5rem;
+  }
+  
+  .item-cardapio p {
+    font-family: var(--Fonte-corpo);
+    font-size: 1rem;
+    color: var(--Textos-principais);
+  }
+  
+  .preco {
+    display: block;
+    margin-top: 1rem;
+    font-family: var(--Fonte-destaque);
+    color: var(--Botões-principais);
+    font-size: 1.2rem;
+  }
+
+  /* dica extra */
+
+  .item-cardapio {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.item-cardapio.ativo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+  

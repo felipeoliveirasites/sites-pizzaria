@@ -1,0 +1,70 @@
+.secao-promocoes {
+    background-color: var(--Fundo-principal);
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .subtexto {
+    font-family: var(--Fonte-corpo);
+    color: var(--Textos-principais);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+  
+  .grid-promocoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .promo-box {
+    background-color: white;
+    border-left: 8px solid var(--Destaques-secundarios);
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .promo-box:hover {
+    transform: scale(1.03);
+    border-left-color: var(--Botões-principais);
+  }
+  
+  .promo-box h2 {
+    color: var(--Títulos-e-ícones);
+    font-family: var(--Fonte-titulo);
+    margin-bottom: 0.5rem;
+  }
+  
+  .promo-box p {
+    font-family: var(--Fonte-corpo);
+    font-size: 1rem;
+    color: var(--Textos-principais);
+    margin-bottom: 1rem;
+  }
+  
+  .preco-promocao {
+    display: block;
+    font-family: var(--Fonte-destaque);
+    color: var(--Botões-principais);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* dica extra */
+
+  .promo-box {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .promo-box.ativo {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  

@@ -1,0 +1,16 @@
+{
+  "name": "sites-pizzaria",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass"
+  },
+  "keywords": [],
+  "author": "Felipe Soares Oliveira <felipeoliveirasites@gmail.com> (https://armagedomdigital.42web.io/)",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "sass-embedded": "^1.86.3"
+  }
+}
