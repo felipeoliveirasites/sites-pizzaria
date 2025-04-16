@@ -1,8 +1,32 @@
 //_sections.sass
   
+@use '../base/_variables.sass' as var
+
 section, footer
   padding: 2rem
   max-width: 900px
   margin: auto
   overflow-x: hidden
+  box-shadow: 0px 2px 7px 2px var(--Botoes-principais)
 
+section.s00
+ background-image: linear-gradient(to bottom right, var(--Fundo-principal), var(--Destaques-secundarios))
+ /* h2
+  position: relative
+  z-index: 20
+  text-shadow: -1px 1px 1px  white
+  background: white 
+  border-radius: 50px */
+section.s0
+ background-image: linear-gradient(to bottom right, var(--Fundo-principal), var(--Botoes-principais))
+
+section.s1
+  background-image: linear-gradient(to bottom right, var(--Destaques-secundarios), var(--Fundo-principal))
+section.s2
+ background-image: linear-gradient(to bottom right, var(--Fundo-principal), var(--Botoes-principais))
+section.s3
+   background-image: linear-gradient(to bottom right, var(--Destaques-secundarios), var(--Fundo-principal))
+section.s4
+  background-image: linear-gradient(to bottom right, var(--Fundo-principal), var(--Botoes-principais))
+footer
+   background-image: linear-gradient(to bottom right, var(--Destaques-secundarios), var(--Fundo-principal))

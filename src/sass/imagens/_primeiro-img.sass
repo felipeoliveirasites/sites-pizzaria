@@ -1,0 +1,28 @@
+@use '../base/_variables' as var
+
+div.primeiro-img
+    display: flex
+    min-width: 100px
+    height: 250px 
+    flex: 1 1 150px
+    border-radius: 50px
+    border: 2px inset var.$Destaques-secundários-transp
+    box-shadow: 2px 7px 3px var.$Destaques-secundários-transp
+    
+    
+    margin: auto
+
+    background-image: url('/dist/img/especialidade.jpg')
+    background-size: cover
+    background-position: center top
+    background-attachment: fixed
+
+div.primeiro-img.ativo
+    animation: mecher 2s 2 alternate
+
+@keyframes mecher 
+    from
+        transform: rotate(0deg)  
+        
+    to 
+        transform: rotate(-1deg)

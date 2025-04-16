@@ -36,8 +36,8 @@ const queijo = document.querySelector("#queijo")
 
   //let ativo = false
   function verificarVisibilidade() {
-    const elemento = document.querySelector('.geral-img');
-    const elemento2 = document.querySelector('.img-icon');
+    const elemento = document.querySelector('.primeiro-img');
+    const elemento2 = document.querySelectorAll('.geral')[0];
   
     //if (!elemento) return;
     //console.log(window.innerHeight)

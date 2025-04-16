@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   text-align: center;
   padding: 0;
@@ -9,14 +8,14 @@
 
 h1, h2, h3 {
   font-family: var(--Fonte-titulo);
-  color: var(--Títulos-e-ícones);
+  color: var(--Titulos-e-icones);
 }
 
 /* p
  * font-family: var(--Fonte-corpo) */
 h1.destaque, .banner-title, .promo-title {
   font-family: var(--Fonte-destaque);
-  color: var(--Botões-principais);
+  color: var(--Botoes-principais);
   text-transform: uppercase;
   letter-spacing: 1px;
   text-shadow: 1px 1px 5px #f0d5a0, 1px 1px 5px rgba(241, 214, 159, 0.7058823529), 1px 1px 5px rgba(241, 211, 149, 0.2862745098);
@@ -28,18 +27,19 @@ h1.principal {
   top: 10px;
   left: 60px;
   z-index: 5000;
-  text-shadow: 2px 2px 5px var(--Botões-principais), 2px 2px 5px var(--Botões-principais), 2px 2px 5px var(--Botões-principais);
+  text-shadow: 2px 2px 5px var(--Botoes-principais), 2px 2px 5px var(--Botoes-principais), 2px 2px 5px var(--Botoes-principais);
   color: var(--Fundo-principal);
   font-family: var(--Fonte-destaque);
   text-align: left;
   font-size: 2rem;
+  line-height: 2rem;
 }
 
 :root {
   --Fundo-principal: #F5E1C0;
   --Textos-principais: #1F1F1F;
-  --Títulos-e-ícones: #2F5D50;
-  --Botões-principais: #B02E0C;
+  --Titulos-e-icones: #2F5D50;
+  --Botoes-principais: #B02E0C;
   --Destaques-secundarios: #F6C667;
   --Fonte-destaque: Bebas Neue, sans-serif;
   --Fonte-titulo: Raleway, sans-serif;
@@ -47,7 +47,7 @@ h1.principal {
 }
 
 button, .btn-principal {
-  background-color: var(--Botões-principais);
+  background-color: var(--Botoes-principais);
   color: white;
   font-family: var(--Fonte-destaque);
   border: none;
@@ -60,7 +60,7 @@ button, .btn-principal {
 }
 
 button:hover, .btn-principal:hover {
-  background-color: var(--Destaques-secundários);
+  background-color: var(--Destaques-secundarios);
   color: var(--Textos-principais);
   text-shadow: 0px 0px 0px var(--Textos-principais), 0px 0px 0px var(--Textos-principais);
   letter-spacing: 1.5px;
@@ -79,7 +79,7 @@ button:hover, .btn-principal:hover {
   transition: right 0.4s ease;
   padding: 2rem;
   z-index: 1001;
-  border-left: 8px solid var(--Botões-principais);
+  border-left: 8px solid var(--Botoes-principais);
   font-family: "Mulish", sans-serif;
 }
 
@@ -94,7 +94,7 @@ button:hover, .btn-principal:hover {
 
 .menu-lateral ul li a {
   text-decoration: none;
-  color: var(--Títulos-e-ícones);
+  color: var(--Titulos-e-icones);
   font-size: 1.2rem;
   font-weight: bold;
   display: block;
@@ -108,7 +108,7 @@ button:hover, .btn-principal:hover {
   top: 10px;
   right: 20px;
   cursor: pointer;
-  color: var(--Botões-principais);
+  color: var(--Botoes-principais);
 }
 
 .overlay {
@@ -121,7 +121,7 @@ button:hover, .btn-principal:hover {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease;
-  z-index: 1000;
+  z-index: 10;
 }
 
 .menu-lateral.ativo {
@@ -135,8 +135,8 @@ button:hover, .btn-principal:hover {
 
 .pizza {
   position: absolute;
-  top: 0;
-  left: 10px;
+  top: 72px;
+  right: 10px;
   width: 60px;
   z-index: 1000;
   transition: transform 0.1s ease-out;
@@ -151,13 +151,19 @@ button:hover, .btn-principal:hover {
 }
 .logo {
   position: absolute;
-  top: 80px;
-  right: 12px;
+  top: 60px;
+  left: 2px;
   background-position: left top;
   background-size: 30%;
   width: 30%;
+  transform: scaleX(-1);
 }
 
+@media screen and (min-width: 1100px) {
+  .logo {
+    left: -80px;
+  }
+}
 .banner {
   position: relative;
   background-image: url("/dist/img/banner-pizza.jpg");
@@ -166,11 +172,12 @@ button:hover, .btn-principal:hover {
   width: 100%;
   height: 300px;
   border-radius: 14%;
-  background-color: #1F1F1F;
+  background-color: white;
   translate: 0px 20px;
   animation: movimento alternate 2s infinite;
   border-bottom: 1px solid #B02E0C;
   transform-origin: center;
+  margin-bottom: -5px;
 }
 
 @keyframes movimento {
@@ -201,14 +208,16 @@ button:hover, .btn-principal:hover {
   }
 }
 body {
-  background: linear-gradient(to right bottom, var(--Fundo-principal), var(--Destaques-secundarios));
-  background-color: var(--Fundo-principal);
+  display: flex;
+  flex-flow: column nowrap;
+  background: linear-gradient(to right, var(--Fundo-principal), var(--Botoes-principais));
   color: var(--Textos-principais);
   font-family: var(--Fonte-corpo);
   font-size: 16px;
   line-height: 1.6;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 section, footer {
@@ -216,9 +225,95 @@ section, footer {
   max-width: 900px;
   margin: auto;
   overflow-x: hidden;
+  box-shadow: 0px 2px 7px 2px var(--Botoes-principais);
 }
 
-.geral-img {
+section.s00 {
+  background-image: linear-gradient(to bottom right, var(--Fundo-principal), var(--Destaques-secundarios));
+  /* h2
+  * position: relative
+  * z-index: 20
+  * text-shadow: -1px 1px 1px  white
+  * background: white 
+  * border-radius: 50px */
+}
+
+section.s0 {
+  background-image: linear-gradient(to bottom right, var(--Fundo-principal), var(--Botoes-principais));
+}
+
+section.s1 {
+  background-image: linear-gradient(to bottom right, var(--Destaques-secundarios), var(--Fundo-principal));
+}
+
+section.s2 {
+  background-image: linear-gradient(to bottom right, var(--Fundo-principal), var(--Botoes-principais));
+}
+
+section.s3 {
+  background-image: linear-gradient(to bottom right, var(--Destaques-secundarios), var(--Fundo-principal));
+}
+
+section.s4 {
+  background-image: linear-gradient(to bottom right, var(--Fundo-principal), var(--Botoes-principais));
+}
+
+footer {
+  background-image: linear-gradient(to bottom right, var(--Destaques-secundarios), var(--Fundo-principal));
+}
+
+div.top-header {
+  height: 25px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: right;
+  background-color: var(--Fundo-principal);
+  padding: 3px 3px 0px 0px;
+  gap: 5px;
+}
+div.top-header img {
+  height: 20px;
+}
+
+.geral-img2 {
+  background-image: url("/dist/img/cardapio-icone.png");
+}
+
+.geral {
+  flex: 1 1 250px;
+  border-radius: 50px;
+  border: 2px inset rgba(246, 198, 103, 0.3);
+  box-shadow: 2px 7px 3px rgba(246, 198, 103, 0.3);
+  margin: auto;
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+}
+
+@media screen and (max-width: 500px) {
+  img.geral {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 501px) {
+  img.geral {
+    display: flex;
+    max-width: 65%;
+  }
+}
+.geral.ativo {
+  animation: mover-direita 1.5s 3 alternate ease;
+}
+@keyframes mover-direita {
+  from {
+    transform: translateX(-50px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+
+div.primeiro-img {
   display: flex;
   min-width: 100px;
   height: 250px;
@@ -233,7 +328,7 @@ section, footer {
   background-attachment: fixed;
 }
 
-.geral-img.ativo {
+div.primeiro-img.ativo {
   animation: mecher 2s 2 alternate;
 }
 
@@ -245,36 +340,10 @@ section, footer {
     transform: rotate(-1deg);
   }
 }
-.geral-img2 {
-  background-image: url("/dist/img/cardapio-icone.png");
-}
-
-.img-icon {
+main {
   display: flex;
-  min-width: 100px;
-  height: 250px;
-  flex: 1 1 150px;
-  border-radius: 50px;
-  border: 2px inset rgba(246, 198, 103, 0.3);
-  box-shadow: 2px 7px 3px rgba(246, 198, 103, 0.3);
-  margin: auto;
-  background-image: url("/dist/img/especialidade.jpg");
-  background-size: cover;
-  background-position: center top;
-  background-attachment: fixed;
-}
-
-.img-icon.ativo {
-  animation: mover-direita 1.5s 3 alternate ease;
-}
-
-@keyframes mover-direita {
-  from {
-    transform: translateX(-50px);
-  }
-  to {
-    transform: translate(0px);
-  }
+  flex-flow: column nowrap;
+  gap: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */
